@@ -5,50 +5,63 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
 
 <style>
-.center {
-    margin: auto;
-    width: 60%;
-    border: none;
-    padding: 10px;
-  }
+    .center {
+        margin: auto;
+        width: 60%;
+        border: none;
+        padding: 10px;
+    }
 
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-}
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+    }
 </style>
 
 <body>
 
-<!-- Content will go here -->
-<h1> My content will be situated here</h1>
+    <!-- Content will go here -->
+    <h1> My content will be situated here</h1>
 
-<!-- Navigation -->
-<nav class="w3-bar w3-black">
-    <a href="#home" class="w3-button w3-bar-item">Home</a>
-    <a href="#notes" class="w3-button w3-bar-item">Notes</a>
-    <a href="#tour" class="w3-button w3-bar-item">Tour</a>
-    <a href="#contact" class="w3-button w3-bar-item">Contact</a>
-</nav>
+    <!-- Navigation -->
+    <nav class="w3-bar w3-black">
+        <a href="#home" class="w3-button w3-bar-item">Home</a>
+        <a href="#notes" class="w3-button w3-bar-item">Notes</a>
+        <a href="#other" class="w3-button w3-bar-item">Other</a>
+        <!-- <a href="#contact" class="w3-button w3-bar-item">Contact</a> -->
+    </nav>
 
-  <!-- Slide Show -->
-<section class="center">
-    <img class="mySlides" src="https://wallpapercave.com/wp/wp2116570.jpg" style="width:50%;" class="img">
-    <img class="mySlides" src="https://i.ytimg.com/vi/VuycTojvR84/maxresdefault.jpg" style="width:50%;" class="img">
-    <img class="mySlides" src="https://ak0.picdn.net/shutterstock/videos/16504690/thumb/1.jpg" style="width:50%;" class="img">
-</section>
+    <!-- Slide Show -->
+    <section class="center">
+        <img class="mySlides" src="https://wallpapercave.com/wp/wp2116570.jpg" style="width:50%;" class="img">
+        <img class="mySlides" src="https://i.ytimg.com/vi/VuycTojvR84/maxresdefault.jpg" style="width:50%;" class="img">
+        <img class="mySlides" src="https://ak0.picdn.net/shutterstock/videos/16504690/thumb/1.jpg" style="width:50%;"
+            class="img">
+    </section>
+
+<br>
+    <div id="demo" class="center">
+        <h5>The XMLHttpRequest Object</h5>
+        <button type="button" onclick="loadDoc()">Change Content</button>
+    </div>
+
+    <!-- Band Description -->
+    <section class="w3-container w3-center w3-content" style="max-width:600px">
+        <h2 class="w3-wide">THE BAND</h2>
+        <p class="w3-opacity"><i>We love music</i></p>
+        <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing
+            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </section>
 
 
-<!-- Band Description -->
-<section class="w3-container w3-center w3-content" style="max-width:600px">
-    <h2 class="w3-wide">THE BAND</h2>
-    <p class="w3-opacity"><i>We love music</i></p>
-    <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-  </section>
-  
-  <!-- Band Members -->
+
+    <!-- Usefuls HTML
   <section class="w3-row-padding w3-center w3-light-grey">
     <article class="w3-third">
       <p>John</p>
@@ -65,28 +78,51 @@ img {
       <img src="img_bandmember.jpg" alt="Random Name" style="width:100%">
       <p>Ringo is the funniest.</p>
     </article>
-  </section>
+  </section> -->
 
 
-  
-<script>
-    // Automatic Slideshow - change image every 3 seconds
-    var myIndex = 0;
-    carousel();
-    
-    function carousel() {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      myIndex++;
-      if (myIndex > x.length) {myIndex = 1}
-      x[myIndex-1].style.display = "block";
-      setTimeout(carousel, 2000);
+
+    <script>
+        // Automatic Slideshow - change image every 3 seconds
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000);
+        }
+
+        function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
     }
-</script>
+  };
+  xhttp.open("GET", "https://www.freeforexapi.com/api/live?pairs=EURGBP,USDJPY", true);
+  xhttp.send();
+}
+        function get_some_data() {
+            const Http = new XMLHttpRequest();
+            const url = 'https://jsonplaceholder.typicode.com/posts';
+            Http.open("GET", url);
+            Http.send();
 
-    
+            Http.onreadystatechange = (e) => {
+                console.log(Http.responseText)
+            }
+        }
+    </script>
+
+
 </body>
+
 </html>

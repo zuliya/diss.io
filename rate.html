@@ -1,0 +1,2535 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63795567-32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-63795567-32');
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Free Forex API | Foreign exchange rates and currency conversion</title>
+    <meta name="description" content="FreeForexAPI provides a simple, and lightweight API for the fastest and most reliable foreign exchange rates available." />
+    <meta name="keywords" content="forex api, currency api, exchange rate api, free, get currency rates api, usd to eur api, gbp to usd api, zar, jpy" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/css/site.css" rel="stylesheet"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.5/svg.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">
+        <img src="/images/logo2.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <span style="color: #2A3B8F">Free Forex API</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Home/Api">Documentation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Home/FAQ">FAQ</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="body-content">
+
+<div class="container">
+    <div class="row">
+
+                                                    <div id="EURUSD" class="RateBlockBig col-6 col-md-3 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">EUR</span><span
+                                class="Separator">/</span><span class="Target">USD</span></div>
+                    <div id="EURUSD_Rate" class="RateNumber">1.115119</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">USD</span><span
+                                class="Separator">/</span><span class="Base">EUR</span></div>
+                    <div id="EURUSD_RateInv" class="RateNumber">0.896765</div>
+                </div>
+                <div id="EURUSD_SVG"></div>
+            </div>
+                                            <div id="EURGBP" class="RateBlockBig col-6 col-md-3 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">EUR</span><span
+                                class="Separator">/</span><span class="Target">GBP</span></div>
+                    <div id="EURUSD_Rate" class="RateNumber">0.859712</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">GBP</span><span
+                                class="Separator">/</span><span class="Base">EUR</span></div>
+                    <div id="EURGBP_RateInv" class="RateNumber">1.16318</div>
+                </div>
+                <div id="EURGBP_SVG"></div>
+            </div>
+                                            <div id="GBPUSD" class="RateBlockBig col-6 col-md-3 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">GBP</span><span
+                                class="Separator">/</span><span class="Target">USD</span></div>
+                    <div id="EURUSD_Rate" class="RateNumber">1.297084</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">USD</span><span
+                                class="Separator">/</span><span class="Base">GBP</span></div>
+                    <div id="GBPUSD_RateInv" class="RateNumber">0.77096</div>
+                </div>
+                <div id="GBPUSD_SVG"></div>
+            </div>
+                                            <div id="USDJPY" class="RateBlockBig col-6 col-md-3 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">JPY</span></div>
+                    <div id="EURUSD_Rate" class="RateNumber">108.605499</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">JPY</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDJPY_RateInv" class="RateNumber">0.009208</div>
+                </div>
+                <div id="USDJPY_SVG"></div>
+            </div>
+                                            <div id="AUDUSD" class="RateBlockBig col-6 col-md-3 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">AUD</span><span
+                                class="Separator">/</span><span class="Target">USD</span></div>
+                    <div id="EURUSD_Rate" class="RateNumber">0.686969</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">USD</span><span
+                                class="Separator">/</span><span class="Base">AUD</span></div>
+                    <div id="AUDUSD_RateInv" class="RateNumber">1.45567</div>
+                </div>
+                <div id="AUDUSD_SVG"></div>
+            </div>
+                                            <div id="USDCHF" class="RateBlockBig col-6 col-md-3 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">CHF</span></div>
+                    <div id="EURUSD_Rate" class="RateNumber">0.98607</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">CHF</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDCHF_RateInv" class="RateNumber">1.014127</div>
+                </div>
+                <div id="USDCHF_SVG"></div>
+            </div>
+                                            <div id="NZDUSD" class="RateBlockBig col-6 col-md-3 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">NZD</span><span
+                                class="Separator">/</span><span class="Target">USD</span></div>
+                    <div id="EURUSD_Rate" class="RateNumber">0.641107</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">USD</span><span
+                                class="Separator">/</span><span class="Base">NZD</span></div>
+                    <div id="NZDUSD_RateInv" class="RateNumber">1.559802</div>
+                </div>
+                <div id="NZDUSD_SVG"></div>
+            </div>
+                                            <div id="USDCAD" class="RateBlockBig col-6 col-md-3 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">CAD</span></div>
+                    <div id="EURUSD_Rate" class="RateNumber">1.30877</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">CAD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDCAD_RateInv" class="RateNumber">0.764076</div>
+                </div>
+                <div id="USDCAD_SVG"></div>
+            </div>
+        
+                                                                                            
+            <div id="USDAED" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">AED</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">3.673202</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">AED</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDAED_RateInv" class="RateNumber">0.272242</div>
+                </div>
+                <div id="USDAED_SVG"></div>
+            </div>
+                                
+            <div id="USDAFN" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">AFN</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">78.249739</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">AFN</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDAFN_RateInv" class="RateNumber">0.01278</div>
+                </div>
+                <div id="USDAFN_SVG"></div>
+            </div>
+                                
+            <div id="USDALL" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">ALL</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">110.750011</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">ALL</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDALL_RateInv" class="RateNumber">0.009029</div>
+                </div>
+                <div id="USDALL_SVG"></div>
+            </div>
+                                
+            <div id="USDAMD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">AMD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">476.320064</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">AMD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDAMD_RateInv" class="RateNumber">0.002099</div>
+                </div>
+                <div id="USDAMD_SVG"></div>
+            </div>
+                                
+            <div id="USDANG" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">ANG</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">1.754818</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">ANG</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDANG_RateInv" class="RateNumber">0.56986</div>
+                </div>
+                <div id="USDANG_SVG"></div>
+            </div>
+                                
+            <div id="USDAOA" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">AOA</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">450.739029</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">AOA</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDAOA_RateInv" class="RateNumber">0.002219</div>
+                </div>
+                <div id="USDAOA_SVG"></div>
+            </div>
+                                
+            <div id="USDARS" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">ARS</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">58.404265</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">ARS</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDARS_RateInv" class="RateNumber">0.017122</div>
+                </div>
+                <div id="USDARS_SVG"></div>
+            </div>
+                                
+            <div id="USDAUD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">AUD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">1.45567</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">AUD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDAUD_RateInv" class="RateNumber">0.686969</div>
+                </div>
+                <div id="USDAUD_SVG"></div>
+            </div>
+                                
+            <div id="USDAWG" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">AWG</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">1.8</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">AWG</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDAWG_RateInv" class="RateNumber">0.555556</div>
+                </div>
+                <div id="USDAWG_SVG"></div>
+            </div>
+                                
+            <div id="USDAZN" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">AZN</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">1.696767</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">AZN</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDAZN_RateInv" class="RateNumber">0.589356</div>
+                </div>
+                <div id="USDAZN_SVG"></div>
+            </div>
+                                
+            <div id="USDBAM" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">BAM</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">1.751939</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">BAM</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDBAM_RateInv" class="RateNumber">0.570796</div>
+                </div>
+                <div id="USDBAM_SVG"></div>
+            </div>
+                                
+            <div id="USDBBD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">BBD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">2.018847</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">BBD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDBBD_RateInv" class="RateNumber">0.495332</div>
+                </div>
+                <div id="USDBBD_SVG"></div>
+            </div>
+                                
+            <div id="USDBDT" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">BDT</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">84.69005</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">BDT</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDBDT_RateInv" class="RateNumber">0.011808</div>
+                </div>
+                <div id="USDBDT_SVG"></div>
+            </div>
+                                
+            <div id="USDBGN" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">BGN</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">1.75406</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">BGN</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDBGN_RateInv" class="RateNumber">0.570106</div>
+                </div>
+                <div id="USDBGN_SVG"></div>
+            </div>
+                                
+            <div id="USDBHD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">BHD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">0.377017</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">BHD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDBHD_RateInv" class="RateNumber">2.6524</div>
+                </div>
+                <div id="USDBHD_SVG"></div>
+            </div>
+                                
+            <div id="USDBIF" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">BIF</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">1871</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">BIF</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDBIF_RateInv" class="RateNumber">0.000534</div>
+                </div>
+                <div id="USDBIF_SVG"></div>
+            </div>
+                                
+            <div id="USDBMD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">BMD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">1</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">BMD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDBMD_RateInv" class="RateNumber">1</div>
+                </div>
+                <div id="USDBMD_SVG"></div>
+            </div>
+                                
+            <div id="USDBND" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">BND</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">1.360959</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">BND</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDBND_RateInv" class="RateNumber">0.734776</div>
+                </div>
+                <div id="USDBND_SVG"></div>
+            </div>
+                                
+            <div id="USDBOB" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">BOB</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">6.914594</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">BOB</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDBOB_RateInv" class="RateNumber">0.144622</div>
+                </div>
+                <div id="USDBOB_SVG"></div>
+            </div>
+                                
+            <div id="USDBRL" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">BRL</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">4.128351</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">BRL</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDBRL_RateInv" class="RateNumber">0.242227</div>
+                </div>
+                <div id="USDBRL_SVG"></div>
+            </div>
+                                
+            <div id="USDBSD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">BSD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">0.999928</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">BSD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDBSD_RateInv" class="RateNumber">1.000072</div>
+                </div>
+                <div id="USDBSD_SVG"></div>
+            </div>
+                                
+            <div id="USDBTN" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">BTN</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">70.81279</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">BTN</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDBTN_RateInv" class="RateNumber">0.014122</div>
+                </div>
+                <div id="USDBTN_SVG"></div>
+            </div>
+                                
+            <div id="USDBWP" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">BWP</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">10.868764</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">BWP</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDBWP_RateInv" class="RateNumber">0.092007</div>
+                </div>
+                <div id="USDBWP_SVG"></div>
+            </div>
+                                
+            <div id="USDBYN" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">BYN</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">2.038016</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">BYN</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDBYN_RateInv" class="RateNumber">0.490673</div>
+                </div>
+                <div id="USDBYN_SVG"></div>
+            </div>
+                                
+            <div id="USDBYR" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">BYR</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">19600</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">BYR</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDBYR_RateInv" class="RateNumber">5.1E-5</div>
+                </div>
+                <div id="USDBYR_SVG"></div>
+            </div>
+                                
+            <div id="USDBZD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">BZD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">2.015443</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">BZD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDBZD_RateInv" class="RateNumber">0.496169</div>
+                </div>
+                <div id="USDBZD_SVG"></div>
+            </div>
+                                            
+            <div id="USDCDF" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">CDF</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">1660.999914</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">CDF</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDCDF_RateInv" class="RateNumber">0.000602</div>
+                </div>
+                <div id="USDCDF_SVG"></div>
+            </div>
+                                            
+            <div id="USDCLP" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">CLP</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">726.200338</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">CLP</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDCLP_RateInv" class="RateNumber">0.001377</div>
+                </div>
+                <div id="USDCLP_SVG"></div>
+            </div>
+                                
+            <div id="USDCNY" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">CNY</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">7.076304</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">CNY</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDCNY_RateInv" class="RateNumber">0.141317</div>
+                </div>
+                <div id="USDCNY_SVG"></div>
+            </div>
+                                
+            <div id="USDCOP" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">COP</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">3449.5</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">COP</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDCOP_RateInv" class="RateNumber">0.00029</div>
+                </div>
+                <div id="USDCOP_SVG"></div>
+            </div>
+                                
+            <div id="USDCRC" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">CRC</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">581.298481</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">CRC</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDCRC_RateInv" class="RateNumber">0.00172</div>
+                </div>
+                <div id="USDCRC_SVG"></div>
+            </div>
+                                
+            <div id="USDCUC" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">CUC</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">1</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">CUC</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDCUC_RateInv" class="RateNumber">1</div>
+                </div>
+                <div id="USDCUC_SVG"></div>
+            </div>
+                                
+            <div id="USDCUP" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">CUP</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">26.5</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">CUP</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDCUP_RateInv" class="RateNumber">0.037736</div>
+                </div>
+                <div id="USDCUP_SVG"></div>
+            </div>
+                                
+            <div id="USDCVE" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">CVE</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">99.150198</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">CVE</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDCVE_RateInv" class="RateNumber">0.010086</div>
+                </div>
+                <div id="USDCVE_SVG"></div>
+            </div>
+                                
+            <div id="USDCZK" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">CZK</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">22.941395</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">CZK</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDCZK_RateInv" class="RateNumber">0.043589</div>
+                </div>
+                <div id="USDCZK_SVG"></div>
+            </div>
+                                
+            <div id="USDDJF" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">DJF</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">177.71993</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">DJF</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDDJF_RateInv" class="RateNumber">0.005627</div>
+                </div>
+                <div id="USDDJF_SVG"></div>
+            </div>
+                                
+            <div id="USDDKK" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">DKK</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">6.69952</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">DKK</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDDKK_RateInv" class="RateNumber">0.149264</div>
+                </div>
+                <div id="USDDKK_SVG"></div>
+            </div>
+                                
+            <div id="USDDOP" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">DOP</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">53.045014</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">DOP</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDDOP_RateInv" class="RateNumber">0.018852</div>
+                </div>
+                <div id="USDDOP_SVG"></div>
+            </div>
+                                
+            <div id="USDDZD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">DZD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">119.439904</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">DZD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDDZD_RateInv" class="RateNumber">0.008372</div>
+                </div>
+                <div id="USDDZD_SVG"></div>
+            </div>
+                                
+            <div id="USDEGP" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">EGP</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">16.199298</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">EGP</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDEGP_RateInv" class="RateNumber">0.061731</div>
+                </div>
+                <div id="USDEGP_SVG"></div>
+            </div>
+                                
+            <div id="USDERN" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">ERN</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">15.000212</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">ERN</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDERN_RateInv" class="RateNumber">0.066666</div>
+                </div>
+                <div id="USDERN_SVG"></div>
+            </div>
+                                
+            <div id="USDETB" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">ETB</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">29.709086</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">ETB</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDETB_RateInv" class="RateNumber">0.03366</div>
+                </div>
+                <div id="USDETB_SVG"></div>
+            </div>
+                                
+            <div id="USDEUR" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">EUR</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">0.896765</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">EUR</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDEUR_RateInv" class="RateNumber">1.115119</div>
+                </div>
+                <div id="USDEUR_SVG"></div>
+            </div>
+                                
+            <div id="USDFJD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">FJD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">2.181601</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">FJD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDFJD_RateInv" class="RateNumber">0.458379</div>
+                </div>
+                <div id="USDFJD_SVG"></div>
+            </div>
+                                
+            <div id="USDFKP" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">FKP</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">0.81288</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">FKP</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDFKP_RateInv" class="RateNumber">1.230194</div>
+                </div>
+                <div id="USDFKP_SVG"></div>
+            </div>
+                                
+            <div id="USDGBP" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">GBP</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">0.77096</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">GBP</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDGBP_RateInv" class="RateNumber">1.297084</div>
+                </div>
+                <div id="USDGBP_SVG"></div>
+            </div>
+                                
+            <div id="USDGEL" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">GEL</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">2.964951</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">GEL</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDGEL_RateInv" class="RateNumber">0.337274</div>
+                </div>
+                <div id="USDGEL_SVG"></div>
+            </div>
+                                
+            <div id="USDGGP" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">GGP</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">0.770933</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">GGP</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDGGP_RateInv" class="RateNumber">1.29713</div>
+                </div>
+                <div id="USDGGP_SVG"></div>
+            </div>
+                                
+            <div id="USDGHS" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">GHS</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">5.474994</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">GHS</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDGHS_RateInv" class="RateNumber">0.182649</div>
+                </div>
+                <div id="USDGHS_SVG"></div>
+            </div>
+                                
+            <div id="USDGIP" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">GIP</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">0.81288</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">GIP</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDGIP_RateInv" class="RateNumber">1.230194</div>
+                </div>
+                <div id="USDGIP_SVG"></div>
+            </div>
+                                
+            <div id="USDGMD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">GMD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">50.74978</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">GMD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDGMD_RateInv" class="RateNumber">0.019705</div>
+                </div>
+                <div id="USDGMD_SVG"></div>
+            </div>
+                                
+            <div id="USDGNF" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">GNF</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">9237.500451</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">GNF</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDGNF_RateInv" class="RateNumber">0.000108</div>
+                </div>
+                <div id="USDGNF_SVG"></div>
+            </div>
+                                
+            <div id="USDGTQ" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">GTQ</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">7.764251</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">GTQ</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDGTQ_RateInv" class="RateNumber">0.128795</div>
+                </div>
+                <div id="USDGTQ_SVG"></div>
+            </div>
+                                
+            <div id="USDGYD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">GYD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">208.69238</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">GYD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDGYD_RateInv" class="RateNumber">0.004792</div>
+                </div>
+                <div id="USDGYD_SVG"></div>
+            </div>
+                                
+            <div id="USDHKD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">HKD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">7.84255</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">HKD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDHKD_RateInv" class="RateNumber">0.12751</div>
+                </div>
+                <div id="USDHKD_SVG"></div>
+            </div>
+                                
+            <div id="USDHNL" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">HNL</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">24.740186</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">HNL</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDHNL_RateInv" class="RateNumber">0.04042</div>
+                </div>
+                <div id="USDHNL_SVG"></div>
+            </div>
+                                
+            <div id="USDHRK" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">HRK</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">6.66849</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">HRK</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDHRK_RateInv" class="RateNumber">0.149959</div>
+                </div>
+                <div id="USDHRK_SVG"></div>
+            </div>
+                                
+            <div id="USDHTG" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">HTG</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">95.88745</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">HTG</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDHTG_RateInv" class="RateNumber">0.010429</div>
+                </div>
+                <div id="USDHTG_SVG"></div>
+            </div>
+                                
+            <div id="USDHUF" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">HUF</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">295.883962</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">HUF</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDHUF_RateInv" class="RateNumber">0.00338</div>
+                </div>
+                <div id="USDHUF_SVG"></div>
+            </div>
+                                
+            <div id="USDIDR" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">IDR</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">14106.5</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">IDR</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDIDR_RateInv" class="RateNumber">7.1E-5</div>
+                </div>
+                <div id="USDIDR_SVG"></div>
+            </div>
+                                
+            <div id="USDILS" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">ILS</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">3.540697</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">ILS</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDILS_RateInv" class="RateNumber">0.28243</div>
+                </div>
+                <div id="USDILS_SVG"></div>
+            </div>
+                                
+            <div id="USDIMP" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">IMP</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">0.770933</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">IMP</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDIMP_RateInv" class="RateNumber">1.29713</div>
+                </div>
+                <div id="USDIMP_SVG"></div>
+            </div>
+                                
+            <div id="USDINR" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">INR</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">71.114964</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">INR</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDINR_RateInv" class="RateNumber">0.014062</div>
+                </div>
+                <div id="USDINR_SVG"></div>
+            </div>
+                                
+            <div id="USDIQD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">IQD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">1190.5</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">IQD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDIQD_RateInv" class="RateNumber">0.00084</div>
+                </div>
+                <div id="USDIQD_SVG"></div>
+            </div>
+                                
+            <div id="USDIRR" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">IRR</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">42104.999639</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">IRR</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDIRR_RateInv" class="RateNumber">2.4E-5</div>
+                </div>
+                <div id="USDIRR_SVG"></div>
+            </div>
+                                
+            <div id="USDISK" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">ISK</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">124.939833</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">ISK</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDISK_RateInv" class="RateNumber">0.008004</div>
+                </div>
+                <div id="USDISK_SVG"></div>
+            </div>
+                                
+            <div id="USDJEP" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">JEP</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">0.770933</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">JEP</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDJEP_RateInv" class="RateNumber">1.29713</div>
+                </div>
+                <div id="USDJEP_SVG"></div>
+            </div>
+                                
+            <div id="USDJMD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">JMD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">136.19751</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">JMD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDJMD_RateInv" class="RateNumber">0.007342</div>
+                </div>
+                <div id="USDJMD_SVG"></div>
+            </div>
+                                
+            <div id="USDJOD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">JOD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">0.709022</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">JOD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDJOD_RateInv" class="RateNumber">1.410393</div>
+                </div>
+                <div id="USDJOD_SVG"></div>
+            </div>
+                                            
+            <div id="USDKES" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">KES</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">103.75133</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">KES</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDKES_RateInv" class="RateNumber">0.009638</div>
+                </div>
+                <div id="USDKES_SVG"></div>
+            </div>
+                                
+            <div id="USDKGS" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">KGS</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">69.789004</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">KGS</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDKGS_RateInv" class="RateNumber">0.014329</div>
+                </div>
+                <div id="USDKGS_SVG"></div>
+            </div>
+                                
+            <div id="USDKHR" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">KHR</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">4060.000208</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">KHR</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDKHR_RateInv" class="RateNumber">0.000246</div>
+                </div>
+                <div id="USDKHR_SVG"></div>
+            </div>
+                                
+            <div id="USDKMF" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">KMF</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">441.749902</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">KMF</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDKMF_RateInv" class="RateNumber">0.002264</div>
+                </div>
+                <div id="USDKMF_SVG"></div>
+            </div>
+                                
+            <div id="USDKPW" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">KPW</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">900.071729</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">KPW</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDKPW_RateInv" class="RateNumber">0.001111</div>
+                </div>
+                <div id="USDKPW_SVG"></div>
+            </div>
+                                
+            <div id="USDKRW" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">KRW</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">1171.698462</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">KRW</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDKRW_RateInv" class="RateNumber">0.000853</div>
+                </div>
+                <div id="USDKRW_SVG"></div>
+            </div>
+                                
+            <div id="USDKWD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">KWD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">0.30315</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">KWD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDKWD_RateInv" class="RateNumber">3.298697</div>
+                </div>
+                <div id="USDKWD_SVG"></div>
+            </div>
+                                
+            <div id="USDKYD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">KYD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">0.833247</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">KYD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDKYD_RateInv" class="RateNumber">1.200124</div>
+                </div>
+                <div id="USDKYD_SVG"></div>
+            </div>
+                                
+            <div id="USDKZT" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">KZT</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">389.83142</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">KZT</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDKZT_RateInv" class="RateNumber">0.002565</div>
+                </div>
+                <div id="USDKZT_SVG"></div>
+            </div>
+                                
+            <div id="USDLAK" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">LAK</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">8824.999785</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">LAK</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDLAK_RateInv" class="RateNumber">0.000113</div>
+                </div>
+                <div id="USDLAK_SVG"></div>
+            </div>
+                                
+            <div id="USDLBP" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">LBP</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">1511.999931</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">LBP</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDLBP_RateInv" class="RateNumber">0.000661</div>
+                </div>
+                <div id="USDLBP_SVG"></div>
+            </div>
+                                
+            <div id="USDLKR" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">LKR</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">181.78538</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">LKR</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDLKR_RateInv" class="RateNumber">0.005501</div>
+                </div>
+                <div id="USDLKR_SVG"></div>
+            </div>
+                                
+            <div id="USDLRD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">LRD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">211.3961</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">LRD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDLRD_RateInv" class="RateNumber">0.00473</div>
+                </div>
+                <div id="USDLRD_SVG"></div>
+            </div>
+                                
+            <div id="USDLSL" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">LSL</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">14.755017</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">LSL</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDLSL_RateInv" class="RateNumber">0.067774</div>
+                </div>
+                <div id="USDLSL_SVG"></div>
+            </div>
+                                
+            <div id="USDLTL" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">LTL</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">2.95274</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">LTL</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDLTL_RateInv" class="RateNumber">0.338668</div>
+                </div>
+                <div id="USDLTL_SVG"></div>
+            </div>
+                                
+            <div id="USDLVL" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">LVL</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">0.60489</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">LVL</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDLVL_RateInv" class="RateNumber">1.653193</div>
+                </div>
+                <div id="USDLVL_SVG"></div>
+            </div>
+                                
+            <div id="USDLYD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">LYD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">1.409592</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">LYD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDLYD_RateInv" class="RateNumber">0.709425</div>
+                </div>
+                <div id="USDLYD_SVG"></div>
+            </div>
+                                
+            <div id="USDMAD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">MAD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">9.606502</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">MAD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDMAD_RateInv" class="RateNumber">0.104096</div>
+                </div>
+                <div id="USDMAD_SVG"></div>
+            </div>
+                                
+            <div id="USDMDL" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">MDL</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">17.358068</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">MDL</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDMDL_RateInv" class="RateNumber">0.05761</div>
+                </div>
+                <div id="USDMDL_SVG"></div>
+            </div>
+                                
+            <div id="USDMGA" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">MGA</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">3624.999756</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">MGA</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDMGA_RateInv" class="RateNumber">0.000276</div>
+                </div>
+                <div id="USDMGA_SVG"></div>
+            </div>
+                                
+            <div id="USDMKD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">MKD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">55.14597</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">MKD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDMKD_RateInv" class="RateNumber">0.018134</div>
+                </div>
+                <div id="USDMKD_SVG"></div>
+            </div>
+                                
+            <div id="USDMMK" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">MMK</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">1532.376499</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">MMK</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDMMK_RateInv" class="RateNumber">0.000653</div>
+                </div>
+                <div id="USDMMK_SVG"></div>
+            </div>
+                                
+            <div id="USDMNT" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">MNT</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">2687.247621</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">MNT</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDMNT_RateInv" class="RateNumber">0.000372</div>
+                </div>
+                <div id="USDMNT_SVG"></div>
+            </div>
+                                
+            <div id="USDMOP" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">MOP</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">8.07761</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">MOP</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDMOP_RateInv" class="RateNumber">0.123799</div>
+                </div>
+                <div id="USDMOP_SVG"></div>
+            </div>
+                                
+            <div id="USDMRO" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">MRO</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">357.000346</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">MRO</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDMRO_RateInv" class="RateNumber">0.002801</div>
+                </div>
+                <div id="USDMRO_SVG"></div>
+            </div>
+                                
+            <div id="USDMUR" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">MUR</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">36.248845</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">MUR</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDMUR_RateInv" class="RateNumber">0.027587</div>
+                </div>
+                <div id="USDMUR_SVG"></div>
+            </div>
+                                
+            <div id="USDMVR" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">MVR</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">15.399493</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">MVR</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDMVR_RateInv" class="RateNumber">0.064937</div>
+                </div>
+                <div id="USDMVR_SVG"></div>
+            </div>
+                                
+            <div id="USDMWK" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">MWK</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">729.999758</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">MWK</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDMWK_RateInv" class="RateNumber">0.00137</div>
+                </div>
+                <div id="USDMWK_SVG"></div>
+            </div>
+                                
+            <div id="USDMXN" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">MXN</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">19.124305</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">MXN</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDMXN_RateInv" class="RateNumber">0.052289</div>
+                </div>
+                <div id="USDMXN_SVG"></div>
+            </div>
+                                
+            <div id="USDMYR" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">MYR</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">4.182499</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">MYR</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDMYR_RateInv" class="RateNumber">0.239092</div>
+                </div>
+                <div id="USDMYR_SVG"></div>
+            </div>
+                                
+            <div id="USDMZN" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">MZN</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">62.374976</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">MZN</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDMZN_RateInv" class="RateNumber">0.016032</div>
+                </div>
+                <div id="USDMZN_SVG"></div>
+            </div>
+                                
+            <div id="USDNAD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">NAD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">14.759659</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">NAD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDNAD_RateInv" class="RateNumber">0.067752</div>
+                </div>
+                <div id="USDNAD_SVG"></div>
+            </div>
+                                
+            <div id="USDNGN" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">NGN</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">361.500036</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">NGN</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDNGN_RateInv" class="RateNumber">0.002766</div>
+                </div>
+                <div id="USDNGN_SVG"></div>
+            </div>
+                                
+            <div id="USDNIO" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">NIO</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">33.650556</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">NIO</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDNIO_RateInv" class="RateNumber">0.029717</div>
+                </div>
+                <div id="USDNIO_SVG"></div>
+            </div>
+                                
+            <div id="USDNOK" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">NOK</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">9.13587</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">NOK</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDNOK_RateInv" class="RateNumber">0.109459</div>
+                </div>
+                <div id="USDNOK_SVG"></div>
+            </div>
+                                
+            <div id="USDNPR" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">NPR</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">113.300103</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">NPR</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDNPR_RateInv" class="RateNumber">0.008826</div>
+                </div>
+                <div id="USDNPR_SVG"></div>
+            </div>
+                                
+            <div id="USDNZD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">NZD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">1.559802</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">NZD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDNZD_RateInv" class="RateNumber">0.641107</div>
+                </div>
+                <div id="USDNZD_SVG"></div>
+            </div>
+                                
+            <div id="USDOMR" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">OMR</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">0.384989</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">OMR</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDOMR_RateInv" class="RateNumber">2.597477</div>
+                </div>
+                <div id="USDOMR_SVG"></div>
+            </div>
+                                
+            <div id="USDPAB" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">PAB</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">0.999839</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">PAB</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDPAB_RateInv" class="RateNumber">1.000161</div>
+                </div>
+                <div id="USDPAB_SVG"></div>
+            </div>
+                                
+            <div id="USDPEN" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">PEN</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">3.338504</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">PEN</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDPEN_RateInv" class="RateNumber">0.299535</div>
+                </div>
+                <div id="USDPEN_SVG"></div>
+            </div>
+                                
+            <div id="USDPGK" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">PGK</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">3.37976</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">PGK</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDPGK_RateInv" class="RateNumber">0.295879</div>
+                </div>
+                <div id="USDPGK_SVG"></div>
+            </div>
+                                
+            <div id="USDPHP" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">PHP</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">51.114972</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">PHP</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDPHP_RateInv" class="RateNumber">0.019564</div>
+                </div>
+                <div id="USDPHP_SVG"></div>
+            </div>
+                                
+            <div id="USDPKR" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">PKR</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">155.999695</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">PKR</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDPKR_RateInv" class="RateNumber">0.00641</div>
+                </div>
+                <div id="USDPKR_SVG"></div>
+            </div>
+                                
+            <div id="USDPLN" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">PLN</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">3.835195</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">PLN</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDPLN_RateInv" class="RateNumber">0.260743</div>
+                </div>
+                <div id="USDPLN_SVG"></div>
+            </div>
+                                
+            <div id="USDPYG" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">PYG</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">6462.038703</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">PYG</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDPYG_RateInv" class="RateNumber">0.000155</div>
+                </div>
+                <div id="USDPYG_SVG"></div>
+            </div>
+                                
+            <div id="USDQAR" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">QAR</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">3.64099</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">QAR</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDQAR_RateInv" class="RateNumber">0.274651</div>
+                </div>
+                <div id="USDQAR_SVG"></div>
+            </div>
+                                
+            <div id="USDRON" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">RON</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">4.2673</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">RON</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDRON_RateInv" class="RateNumber">0.23434</div>
+                </div>
+                <div id="USDRON_SVG"></div>
+            </div>
+                                
+            <div id="USDRSD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">RSD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">105.505019</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">RSD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDRSD_RateInv" class="RateNumber">0.009478</div>
+                </div>
+                <div id="USDRSD_SVG"></div>
+            </div>
+                                
+            <div id="USDRUB" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">RUB</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">63.760099</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">RUB</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDRUB_RateInv" class="RateNumber">0.015684</div>
+                </div>
+                <div id="USDRUB_SVG"></div>
+            </div>
+                                
+            <div id="USDRWF" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">RWF</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">925</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">RWF</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDRWF_RateInv" class="RateNumber">0.001081</div>
+                </div>
+                <div id="USDRWF_SVG"></div>
+            </div>
+                                
+            <div id="USDSAR" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">SAR</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">3.750706</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">SAR</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDSAR_RateInv" class="RateNumber">0.266616</div>
+                </div>
+                <div id="USDSAR_SVG"></div>
+            </div>
+                                
+            <div id="USDSBD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">SBD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">8.294408</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">SBD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDSBD_RateInv" class="RateNumber">0.120563</div>
+                </div>
+                <div id="USDSBD_SVG"></div>
+            </div>
+                                
+            <div id="USDSCR" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">SCR</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">13.704969</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">SCR</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDSCR_RateInv" class="RateNumber">0.072966</div>
+                </div>
+                <div id="USDSCR_SVG"></div>
+            </div>
+                                
+            <div id="USDSDG" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">SDG</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">45.10749</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">SDG</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDSDG_RateInv" class="RateNumber">0.022169</div>
+                </div>
+                <div id="USDSDG_SVG"></div>
+            </div>
+                                
+            <div id="USDSEK" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">SEK</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">9.641425</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">SEK</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDSEK_RateInv" class="RateNumber">0.103719</div>
+                </div>
+                <div id="USDSEK_SVG"></div>
+            </div>
+                                
+            <div id="USDSGD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">SGD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">1.36128</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">SGD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDSGD_RateInv" class="RateNumber">0.734603</div>
+                </div>
+                <div id="USDSGD_SVG"></div>
+            </div>
+                                
+            <div id="USDSHP" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">SHP</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">1.320897</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">SHP</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDSHP_RateInv" class="RateNumber">0.757061</div>
+                </div>
+                <div id="USDSHP_SVG"></div>
+            </div>
+                                
+            <div id="USDSLL" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">SLL</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">9595.000124</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">SLL</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDSLL_RateInv" class="RateNumber">0.000104</div>
+                </div>
+                <div id="USDSLL_SVG"></div>
+            </div>
+                                
+            <div id="USDSOS" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">SOS</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">580.000343</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">SOS</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDSOS_RateInv" class="RateNumber">0.001724</div>
+                </div>
+                <div id="USDSOS_SVG"></div>
+            </div>
+                                
+            <div id="USDSRD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">SRD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">7.457985</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">SRD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDSRD_RateInv" class="RateNumber">0.134084</div>
+                </div>
+                <div id="USDSRD_SVG"></div>
+            </div>
+                                
+            <div id="USDSTD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">STD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">21560.79</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">STD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDSTD_RateInv" class="RateNumber">4.6E-5</div>
+                </div>
+                <div id="USDSTD_SVG"></div>
+            </div>
+                                
+            <div id="USDSVC" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">SVC</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">8.748813</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">SVC</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDSVC_RateInv" class="RateNumber">0.114301</div>
+                </div>
+                <div id="USDSVC_SVG"></div>
+            </div>
+                                
+            <div id="USDSYP" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">SYP</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">515.000133</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">SYP</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDSYP_RateInv" class="RateNumber">0.001942</div>
+                </div>
+                <div id="USDSYP_SVG"></div>
+            </div>
+                                
+            <div id="USDSZL" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">SZL</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">14.760351</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">SZL</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDSZL_RateInv" class="RateNumber">0.067749</div>
+                </div>
+                <div id="USDSZL_SVG"></div>
+            </div>
+                                
+            <div id="USDTHB" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">THB</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">30.269717</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">THB</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDTHB_RateInv" class="RateNumber">0.033036</div>
+                </div>
+                <div id="USDTHB_SVG"></div>
+            </div>
+                                
+            <div id="USDTJS" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">TJS</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">9.688905</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">TJS</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDTJS_RateInv" class="RateNumber">0.103211</div>
+                </div>
+                <div id="USDTJS_SVG"></div>
+            </div>
+                                
+            <div id="USDTMT" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">TMT</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">3.5</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">TMT</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDTMT_RateInv" class="RateNumber">0.285714</div>
+                </div>
+                <div id="USDTMT_SVG"></div>
+            </div>
+                                
+            <div id="USDTND" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">TND</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">2.822968</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">TND</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDTND_RateInv" class="RateNumber">0.354237</div>
+                </div>
+                <div id="USDTND_SVG"></div>
+            </div>
+                                
+            <div id="USDTOP" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">TOP</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">2.315395</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">TOP</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDTOP_RateInv" class="RateNumber">0.431892</div>
+                </div>
+                <div id="USDTOP_SVG"></div>
+            </div>
+                                
+            <div id="USDTRY" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">TRY</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">5.86042</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">TRY</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDTRY_RateInv" class="RateNumber">0.170636</div>
+                </div>
+                <div id="USDTRY_SVG"></div>
+            </div>
+                                
+            <div id="USDTTD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">TTD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">6.772156</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">TTD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDTTD_RateInv" class="RateNumber">0.147663</div>
+                </div>
+                <div id="USDTTD_SVG"></div>
+            </div>
+                                
+            <div id="USDTWD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">TWD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">30.52196</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">TWD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDTWD_RateInv" class="RateNumber">0.032763</div>
+                </div>
+                <div id="USDTWD_SVG"></div>
+            </div>
+                                
+            <div id="USDTZS" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">TZS</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">2296.192461</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">TZS</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDTZS_RateInv" class="RateNumber">0.000436</div>
+                </div>
+                <div id="USDTZS_SVG"></div>
+            </div>
+                                
+            <div id="USDUAH" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">UAH</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">24.893495</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">UAH</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDUAH_RateInv" class="RateNumber">0.040171</div>
+                </div>
+                <div id="USDUAH_SVG"></div>
+            </div>
+                                
+            <div id="USDUGX" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">UGX</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">3689.603902</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">UGX</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDUGX_RateInv" class="RateNumber">0.000271</div>
+                </div>
+                <div id="USDUGX_SVG"></div>
+            </div>
+                                
+            <div id="USDUSD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">USD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">1</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">USD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDUSD_RateInv" class="RateNumber">1</div>
+                </div>
+                <div id="USDUSD_SVG"></div>
+            </div>
+                                
+            <div id="USDUYU" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">UYU</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">37.342733</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">UYU</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDUYU_RateInv" class="RateNumber">0.026779</div>
+                </div>
+                <div id="USDUYU_SVG"></div>
+            </div>
+                                
+            <div id="USDUZS" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">UZS</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">9448.000157</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">UZS</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDUZS_RateInv" class="RateNumber">0.000106</div>
+                </div>
+                <div id="USDUZS_SVG"></div>
+            </div>
+                                
+            <div id="USDVEF" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">VEF</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">9.987501</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">VEF</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDVEF_RateInv" class="RateNumber">0.100125</div>
+                </div>
+                <div id="USDVEF_SVG"></div>
+            </div>
+                                
+            <div id="USDVND" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">VND</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">23208.5</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">VND</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDVND_RateInv" class="RateNumber">4.3E-5</div>
+                </div>
+                <div id="USDVND_SVG"></div>
+            </div>
+                                
+            <div id="USDVUV" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">VUV</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">117.037217</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">VUV</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDVUV_RateInv" class="RateNumber">0.008544</div>
+                </div>
+                <div id="USDVUV_SVG"></div>
+            </div>
+                                
+            <div id="USDWST" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">WST</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">2.669569</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">WST</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDWST_RateInv" class="RateNumber">0.374592</div>
+                </div>
+                <div id="USDWST_SVG"></div>
+            </div>
+                                
+            <div id="USDXAF" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">XAF</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">587.59344</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">XAF</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDXAF_RateInv" class="RateNumber">0.001702</div>
+                </div>
+                <div id="USDXAF_SVG"></div>
+            </div>
+                                
+            <div id="USDXAG" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">XAG</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">0.056928</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">XAG</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDXAG_RateInv" class="RateNumber">17.566048</div>
+                </div>
+                <div id="USDXAG_SVG"></div>
+            </div>
+                                
+            <div id="USDXAU" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">XAU</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">0.000674</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">XAU</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDXAU_RateInv" class="RateNumber">1483.679525</div>
+                </div>
+                <div id="USDXAU_SVG"></div>
+            </div>
+                                
+            <div id="USDXCD" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">XCD</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">2.70255</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">XCD</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDXCD_RateInv" class="RateNumber">0.370021</div>
+                </div>
+                <div id="USDXCD_SVG"></div>
+            </div>
+                                
+            <div id="USDXDR" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">XDR</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">0.725392</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">XDR</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDXDR_RateInv" class="RateNumber">1.378565</div>
+                </div>
+                <div id="USDXDR_SVG"></div>
+            </div>
+                                
+            <div id="USDXOF" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">XOF</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">587.999606</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">XOF</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDXOF_RateInv" class="RateNumber">0.001701</div>
+                </div>
+                <div id="USDXOF_SVG"></div>
+            </div>
+                                
+            <div id="USDXPF" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">XPF</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">107.549782</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">XPF</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDXPF_RateInv" class="RateNumber">0.009298</div>
+                </div>
+                <div id="USDXPF_SVG"></div>
+            </div>
+                                
+            <div id="USDYER" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">YER</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">250.349855</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">YER</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDYER_RateInv" class="RateNumber">0.003994</div>
+                </div>
+                <div id="USDYER_SVG"></div>
+            </div>
+                                
+            <div id="USDZAR" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">ZAR</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">14.760606</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">ZAR</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDZAR_RateInv" class="RateNumber">0.067748</div>
+                </div>
+                <div id="USDZAR_SVG"></div>
+            </div>
+                                
+            <div id="USDZMK" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">ZMK</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">9001.200677</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">ZMK</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDZMK_RateInv" class="RateNumber">0.000111</div>
+                </div>
+                <div id="USDZMK_SVG"></div>
+            </div>
+                                
+            <div id="USDZMW" class="RateBlock col-4 col-md-2 mt-3">
+                <div class="RateInfo">
+                    <div class="RateSymbol"><span class="Base">USD</span><span
+                                class="Separator">/</span><span class="Target">ZMW</span></div>
+                    <div id="EURGBP_Rate" class="RateNumber">13.22856</div>
+                </div>
+                <div class="RateInfoInv">
+                    <div class="RateSymbol"><span class="Target">ZMW</span><span
+                                class="Separator">/</span><span class="Base">USD</span></div>
+                    <div id="USDZMW_RateInv" class="RateNumber">0.075594</div>
+                </div>
+                <div id="USDZMW_SVG"></div>
+            </div>
+        
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 bg-dark text-light">
+            <span class="d-flex justify-content-center font-weight-bold mt-4" style="font-size:5em;">FREE</span>
+            <h1 class="d-flex justify-content-center text-center">Foreign Exchange Rates</h1>
+            <div class="d-flex justify-content-center mt-md-5 mt-sm-3 pb-sm-3 pb-md-0">
+                <ul>
+                    <li>Live rates of all the major currency pairs</li>
+                    <li>The <strong>fastest</strong> updates from over <strong>400</strong> sources</li>
+                    <li>Easy, simple, JSON API</li>
+                    <li>No registration required.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-1 col-sm-0"></div>
+        <div class="col-md-10 col-sm-12">
+            <h2>Welcome to the Free Forex API !!</h2>
+            <p class="mt-3">
+                This API is available free of charge to all web developers who need to show the most accurate, live,
+                foreign exchange rates
+                for all the major currency pairs. The API is simple and easy to use and best of all there is no
+                registration required! Simply
+                make a call to the end point as described in the API Documentation. All that we ask is that you kindly
+                add a backlink to our
+                site to support our project and allow us to continue to provide this great service for free!
+            </p>
+        </div>
+        <div class="col-md-1 col-sm-0"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    RATES = {"AUDUSD":[0.67087,0.674498,0.677092,0.677092,0.67636,0.673217,0.672789,0.671727,0.676286,0.679278,0.679278,0.679599,0.677515,0.675274,0.675605,0.682451,0.68545,0.68545,0.684727,0.686969,0.686969],"EURGBP":[0.890911,0.889268,0.890259,0.890259,0.890579,0.892911,0.896935,0.899595,0.885632,0.872325,0.872332,0.874029,0.874389,0.864779,0.86369,0.864594,0.859838,0.859838,0.864786,0.859712,0.859712],"EURUSD":[1.096135,1.09749,1.097996,1.097996,1.098416,1.097171,1.095968,1.098543,1.101067,1.103496,1.1035,1.10285,1.102661,1.103436,1.107444,1.112473,1.1165,1.1165,1.115536,1.115119,1.115119],"GBPUSD":[1.230353,1.234149,1.233344,1.233344,1.233373,1.228757,1.221904,1.221153,1.243256,1.265005,1.265,1.2618,1.261065,1.275974,1.282223,1.2867,1.2985,1.2985,1.289957,1.297084,1.297084],"NZDUSD":[0.62661,0.6303,0.632651,0.631652,0.631578,0.629073,0.629772,0.628697,0.632521,0.633391,0.633392,0.632769,0.630511,0.629459,0.628717,0.635391,0.638065,0.638065,0.6383,0.641107,0.641107],"USDAED":[3.673202,3.673198,3.673204,3.673204,3.67298,3.673201,3.673202,3.673203,3.673008,3.673042,3.673042,3.67295,3.673204,3.673197,3.673198,3.673199,3.673204,3.673204,3.67299,3.673202,3.673202],"USDAFN":[78.053009,78.249947,78.250404,78.315041,78.315056,78.221502,78.300984,78.250418,78.300406,78.250404,78.250404,78.14227,78.17268,78.250054,78.51423,78.298393,78.250404,78.250404,78.250276,78.249739,78.249739],"USDALL":[111.839982,111.834973,111.680403,111.620403,111.620028,111.749824,111.999633,112.000213,111.770241,111.475041,111.475041,111.58133,111.70044,111.703502,111.93971,111.450178,110.950403,110.950403,110.950212,110.750011,110.750011],"USDAMD":[474.569751,476.240561,476.330403,477.085041,477.084997,476.52026,476.60572,476.680313,476.702138,476.730403,476.730403,477.00951,476.440077,476.570053,476.759561,476.429706,476.340403,476.340403,476.340359,476.320064,476.320064],"USDANG":[1.74865,1.753603,1.75585,1.75645,1.75645,1.75425,1.754403,1.755102,1.75495,1.75435,1.75435,1.755052,1.755523,1.755551,1.754645,1.753678,1.755172,1.755172,1.755172,1.754818,1.754818],"USDAOA":[378.0295,378.029498,381.067041,381.067041,381.066982,381.066997,382.702503,386.854499,392.070504,399.584041,399.584041,399.583977,409.281974,413.893501,426.644497,442.502503,449.036504,449.036504,449.036497,450.739029,450.739029],"USDARS":[57.82597,57.658964,57.650402,57.717041,57.703499,57.833989,57.842009,57.765989,57.9145,58.077504,58.077481,57.959925,58.043989,58.274428,57.750056,58.231852,58.302015,58.302015,58.351699,58.404265,58.404265],"USDAUD":[1.490602,1.482585,1.476904,1.476904,1.478502,1.485405,1.486351,1.488699,1.478665,1.47215,1.47215,1.471455,1.475982,1.48088,1.480155,1.465307,1.458896,1.458896,1.460435,1.45567,1.45567],"USDAWG":[1.8,1.8,1.8,1.8,1.8,1.8,1.8,1.8,1.8,1.8,1.8,1.8,1.8,1.8,1.8,1.8,1.8,1.8,1.8,1.8,1.8],"USDAZN":[1.705011,1.704971,1.705041,1.705041,1.704997,1.704995,1.696464,1.696492,1.696492,1.699434,1.699996,1.696493,1.696511,1.696493,1.696661,1.696493,1.70397,1.70397,1.701987,1.696767,1.696767],"USDBAM":[1.7844,1.78395,1.780504,1.781204,1.781202,1.780796,1.779301,1.781201,1.77375,1.771704,1.771704,1.772388,1.773489,1.775791,1.773642,1.758619,1.757157,1.757157,1.757157,1.751939,1.751939],"USDBBD":[2.0118,2.0179,2.02005,2.02075,2.02075,2.01825,2.0183,2.01915,2.01905,2.0183,2.0183,2.019121,2.019668,2.019796,2.018736,2.017552,2.019297,2.019297,2.019297,2.018847,2.018847],"USDBDT":[84.188006,84.577496,84.599504,84.629504,84.629503,84.608502,84.527963,84.6995,84.693498,84.707504,84.707504,84.74155,84.71993,84.72227,84.67929,84.63066,84.76763,84.76763,84.76763,84.69005,84.69005],"USDBGN":[1.7845,1.782298,1.781704,1.78115,1.78115,1.7826,1.784797,1.779905,1.77665,1.772404,1.772404,1.772361,1.773496,1.772602,1.766101,1.758033,1.752204,1.752204,1.7522,1.75406,1.75406],"USDBHD":[0.37699,0.37702,0.37699,0.37696,0.37696,0.377015,0.376955,0.37696,0.376995,0.37703,0.37703,0.377073,0.376932,0.377034,0.376973,0.376982,0.376983,0.376983,0.376983,0.377017,0.377017],"USDBIF":[1841.45,1860,1860,1849.9,1849.9,1861,1861,1861,1860,1860,1860,1848.9624,1849.4475,1860,1861,1865,1866,1866,1866,1871,1871],"USDBMD":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"USDBND":[1.380897,1.379797,1.379504,1.37995,1.37995,1.37995,1.38105,1.38015,1.37705,1.37405,1.37405,1.374536,1.369508,1.37126,1.372321,1.364049,1.365723,1.365723,1.365723,1.360959,1.360959],"USDBOB":[6.88985,6.909406,6.918204,6.92065,6.92065,6.912006,6.91235,6.91545,6.914904,6.91235,6.91235,6.915088,6.916907,6.91723,6.91375,6.909776,6.915579,6.915579,6.915579,6.914594,6.914594],"USDBRL":[4.12805,4.0844,4.057104,4.057404,4.056101,4.106601,4.09455,4.109797,4.109898,4.113304,4.113304,4.109755,4.125199,4.180104,4.150099,4.162604,4.112704,4.112704,4.112603,4.128351,4.128351],"USDBSD":[0.996405,0.99941,1.00043,1.00082,1.00082,0.99954,0.99964,1.000035,0.99996,0.99964,0.99964,1,1.000268,1.000318,0.999801,0.999245,1.000081,1.000081,1.000081,0.999928,0.999928],"USDBTN":[70.8455,70.845026,70.844504,70.868041,70.868006,70.947498,71.128972,71.033502,71.072055,71.035041,71.035041,71.06126,71.20368,71.56858,71.43571,71.13089,71.18389,71.18389,71.18389,70.81279,70.81279],"USDBWP":[11.070974,11.049499,11.042041,11.046504,11.046497,11.038966,11.076501,11.068505,11.043504,10.943041,10.943041,10.947259,10.908365,10.932667,10.963164,10.896919,10.870534,10.870534,10.870534,10.868764,10.868764],"USDBYN":[2.081202,2.079205,2.07135,2.07225,2.07225,2.07075,2.07185,2.06915,2.060799,2.048204,2.048204,2.049026,2.049845,2.050991,2.046576,2.036686,2.038066,2.038066,2.038066,2.038016,2.038016],"USDBYR":[19600,19600,19600,19600,19600,19600,19600,19600,19600,19600,19600,19600,19600,19600,19600,19600,19600,19600,19600,19600,19600],"USDBZD":[2.008403,2.014398,2.016504,2.017304,2.017298,2.014899,2.01495,2.01585,2.01565,2.015041,2.015041,2.015768,2.016222,2.016345,2.01538,2.014153,2.015883,2.015883,2.015883,2.015443,2.015443],"USDCAD":[1.33294,1.333755,1.33122,1.33122,1.33075,1.330335,1.33219,1.33375,1.32879,1.320495,1.320495,1.32015,1.322599,1.32045,1.32025,1.31368,1.312775,1.312775,1.31345,1.30877,1.30877],"USDCDF":[1665.999563,1665.999532,1665.000362,1665.000362,1665.00019,1665.999863,1666.000151,1665.000064,1665.999518,1666.000362,1666.000362,1665.999781,1666.000145,1666.000211,1665.000075,1660.000232,1661.000362,1661.000362,1660.999824,1660.999914,1660.999914],"USDCHF":[0.996795,0.998225,0.99535,0.99535,0.99405,0.994875,0.9928,0.992955,0.99619,0.99668,0.99668,0.998027,0.99768,0.998585,0.99447,0.987506,0.983673,0.983673,0.984985,0.98607,0.98607],"USDCLP":[724.804993,716.610431,715.303912,715.303912,714.985012,718.919797,724.690238,724.004961,719.000042,710.505041,710.505041,710.50026,714.505413,715.99964,717.097134,711.704435,710.703912,710.703912,711.301922,726.200338,726.200338],"USDCNY":[7.148601,7.148498,7.148504,7.148404,7.148404,7.148402,7.144498,7.132398,7.116501,7.088204,7.088204,7.088203,7.067596,7.081802,7.093697,7.077402,7.081704,7.081704,7.081704,7.076304,7.076304],"USDCOP":[3484.1,3447,3434,3451.25,3451.25,3441,3451.5,3466.5,3467,3447.5,3447.5,3460.0815,3430.1621,3452.5,3458.5,3457,3426,3426,3426,3449.5,3449.5],"USDCRC":[578.785025,580.690257,581.285041,581.510395,581.509881,582.56994,582.050135,581.690721,581.585002,581.890395,581.890395,582.11146,581.91611,581.938695,580.56061,580.37279,581.11058,581.11058,581.11058,581.298481,581.298481],"USDCUC":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"USDCUP":[26.5,26.5,26.5,26.5,26.5,26.5,26.5,26.5,26.5,26.5,26.5,26.5,26.5,26.5,26.5,26.5,26.5,26.5,26.5,26.5,26.5],"USDCVE":[100.6103,101.000089,100.850394,100.430394,100.429594,100.500677,100.550336,100.650271,100.375022,100.303897,100.303897,99.92297,99.98594,100.350156,100.249855,99.520279,99.350394,99.350394,99.350188,99.150198,99.150198],"USDCZK":[23.522096,23.433983,23.42605,23.43404,23.426601,23.487301,23.5309,23.488802,23.457898,23.385704,23.385704,23.407965,23.424702,23.367024,23.262798,23.101803,22.95885,22.95885,22.983699,22.941395,22.941395],"USDDJF":[177.719983,177.720151,177.720394,177.720394,177.720441,177.719732,177.720006,177.720326,177.719743,177.720394,177.720394,177.720366,177.720281,177.720574,177.719646,177.719755,177.720394,177.720394,177.72045,177.71993,177.71993],"USDDKK":[6.811503,6.803015,6.802304,6.801704,6.79871,6.807803,6.8151,6.798799,6.782804,6.767304,6.767304,6.772298,6.77397,6.77017,6.745994,6.7154,6.688504,6.688504,6.6971,6.69952,6.69952],"USDDOP":[51.97991,52.450159,52.503886,52.352504,52.352503,52.537889,52.559987,53.015006,52.985001,52.970393,52.970393,52.751246,52.754567,53.020326,53.019788,53.050361,53.02504,53.02504,53.024954,53.045014,53.045014],"USDDZD":[120.295014,120.385008,120.220393,120.18504,120.184998,120.450092,120.48494,120.420267,120.110325,120.01504,120.01504,120.0154,119.988026,120.02084,119.814905,119.584979,119.36404,119.36404,119.363983,119.439904,119.439904],"USDEGP":[16.333976,16.3079,16.30604,16.30604,16.300966,16.310502,16.288502,16.303997,16.277303,16.291504,16.291799,16.301402,16.262901,16.241397,16.228601,16.228801,16.257949,16.257949,16.271898,16.199298,16.199298],"USDERN":[14.99987,14.999531,15.000358,15.000358,15.000214,15.000266,14.99978,14.999974,15.000276,15.000358,15.000358,14.999938,14.999636,15.000201,15.00057,14.999828,15.000358,15.000358,14.999807,15.000212,15.000212],"USDETB":[29.32802,29.630245,29.660392,29.465504,29.465502,29.649917,29.602876,29.597557,29.550346,29.570392,29.570392,29.476121,29.350066,29.650133,29.65011,29.709935,29.703876,29.703876,29.709569,29.709086,29.709086],"USDEUR":[0.912296,0.91117,0.91075,0.91075,0.910402,0.911435,0.912435,0.910297,0.90821,0.90621,0.906208,0.906742,0.906897,0.90626,0.90298,0.898898,0.895656,0.895656,0.89643,0.896765,0.896765],"USDFJD":[2.19495,2.188751,2.20504,2.18875,2.18875,2.20365,2.202704,2.191605,2.19835,2.203871,2.203871,2.19835,2.199303,2.20175,2.200801,2.190203,2.205804,2.205804,2.205798,2.181601,2.181601],"USDFKP":[0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288],"USDGBP":[0.812775,0.810275,0.810804,0.810804,0.810785,0.81383,0.818395,0.818898,0.80434,0.79051,0.790514,0.792519,0.792981,0.783715,0.779895,0.777182,0.770119,0.770119,0.77522,0.77096,0.77096],"USDGEL":[2.969819,2.964962,2.96504,2.96504,2.965008,2.964984,2.955025,2.970135,2.965014,2.970391,2.970391,2.969895,2.969436,2.969364,2.970024,2.974969,2.96504,2.96504,2.96499,2.964951,2.964951],"USDGGP":[0.812843,0.810317,0.811089,0.810704,0.810798,0.813827,0.818248,0.818749,0.804596,0.790608,0.790434,0.792353,0.793012,0.783639,0.779967,0.777154,0.77056,0.770498,0.774847,0.770933,0.770933],"USDGHS":[5.370399,5.414979,5.41039,5.424404,5.424398,5.409802,5.449914,5.449921,5.444992,5.43039,5.43039,5.405075,5.471502,5.430309,5.429606,5.469709,5.48039,5.48039,5.479812,5.474994,5.474994],"USDGIP":[0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288,0.81288],"USDGMD":[50.502932,50.488498,50.503853,50.503853,50.502348,50.519959,50.549848,50.601624,51.000328,50.45039,50.45039,50.450232,50.45028,50.818493,50.75021,50.770094,50.75039,50.75039,50.750506,50.74978,50.74978],"USDGNF":[9208.90436,9229.999861,9255.000355,9252.55039,9252.549973,9225.000082,9237.499944,9249.999771,9229.999755,9235.000355,9235.000355,9249.659993,9300.646988,9230.000294,9237.487145,9229.999854,9230.000355,9230.000355,9230.000212,9237.500451,9237.500451],"USDGTQ":[7.731799,7.760097,7.77835,7.78135,7.78135,7.771798,7.77205,7.7756,7.764902,7.762204,7.762204,7.765111,7.767193,7.767537,7.763621,7.759005,7.765719,7.765719,7.765719,7.764251,7.764251],"USDGYD":[208.454983,208.460012,208.75504,208.82504,208.824973,208.554948,208.620462,208.605026,208.654971,208.61504,208.61504,208.69959,208.976198,209.28036,208.736503,209.05829,208.75744,208.75744,208.75744,208.69238,208.69238],"USDHKD":[7.84305,7.84225,7.83935,7.839704,7.84205,7.84295,7.84465,7.84515,7.84258,7.843715,7.843715,7.84345,7.845045,7.84545,7.84505,7.84425,7.84313,7.84313,7.84295,7.84255,7.84255],"USDHNL":[24.5235,24.680185,24.680389,24.63304,24.633019,24.749461,24.780285,24.764993,24.725022,24.710389,24.710389,24.616221,24.62176,24.749962,24.729581,24.749994,24.730389,24.730389,24.730042,24.740186,24.740186],"USDHRK":[6.764798,6.758201,6.76005,6.757904,6.757901,6.764701,6.7719,6.758598,6.744977,6.736304,6.736304,6.736293,6.739098,6.736303,6.711701,6.689707,6.661504,6.661504,6.661499,6.66849,6.66849],"USDHTG":[95.800503,95.72703,95.928504,95.965504,95.965498,95.940503,96.133977,96.233005,96.396993,96.16704,96.16704,96.19846,95.58263,95.58683,95.63628,95.593101,95.74615,95.74615,95.74615,95.88745,95.88745],"USDHUF":[304.606999,302.722017,302.89504,302.990388,302.679687,303.855981,304.709783,304.195993,301.629617,301.020388,301.020388,301.149738,300.816983,300.97995,300.429785,297.769838,296.650388,296.650388,296.485996,295.883962,295.883962],"USDIDR":[14195,14173,14134,14134,14135,14243.5,14213,14221.5,14152,14133.05,14133.05,14128,14172.5,14220,14228,14188.5,14127.5,14127.5,14145,14106.5,14106.5],"USDILS":[3.491703,3.49725,3.479204,3.479204,3.479196,3.50841,3.50623,3.50506,3.508897,3.505155,3.505155,3.505155,3.51065,3.517975,3.53335,3.53963,3.54375,3.54375,3.54375,3.540697,3.540697],"USDIMP":[0.812843,0.810317,0.811089,0.810704,0.810798,0.813827,0.818248,0.818749,0.804596,0.790608,0.790434,0.792353,0.793012,0.783639,0.779967,0.777154,0.77056,0.770498,0.774847,0.770933,0.770933],"USDINR":[71.151598,71.029703,70.82504,70.825504,70.824975,71.387497,71.220136,71.419758,70.989805,71.050387,71.050387,70.924005,71.462498,71.790468,71.630134,71.432497,71.090504,71.090504,71.040265,71.114964,71.114964],"USDIQD":[1188.9,1190,1190,1194.15,1194.15,1190.5,1190,1190,1190,1189.5,1189.5,1193.8287,1194.1458,1190,1190,1190,1190,1190,1190,1190.5,1190.5],"USDIRR":[42104.999804,42104.999776,42105.000352,42105.000352,42104.999596,42104.9997,42104.99996,42104.999709,42104.999885,42105.000352,42105.000352,42104.9999,42104.999815,42105.000147,42105.00019,42104.9998,42105.000352,42105.000352,42105.000042,42104.999639,42104.999639],"USDISK":[123.809888,123.640047,123.790386,123.790386,123.7299,124.419725,125.289986,125.329807,125.05943,124.703816,124.703816,124.849829,125.420196,125.339895,124.880336,124.489662,124.570386,124.570386,124.694201,124.939833,124.939833],"USDJEP":[0.812843,0.810317,0.811089,0.810704,0.810798,0.813827,0.818248,0.818749,0.804596,0.790608,0.790434,0.792353,0.793012,0.783639,0.779967,0.777154,0.77056,0.770498,0.774847,0.770933,0.770933],"USDJMD":[133.701579,133.9099,134.303811,134.340386,134.339754,134.03501,134.600226,134.840043,133.999779,136.090386,136.090386,136.14771,136.138303,135.32349,134.30032,133.89922,136.90201,136.90201,136.90201,136.19751,136.19751],"USDJOD":[0.708201,0.708972,0.707504,0.707504,0.707499,0.708987,0.709007,0.709007,0.708995,0.70904,0.70904,0.709005,0.709019,0.709021,0.708975,0.708961,0.707904,0.707904,0.707902,0.709022,0.709022],"USDJPY":[107.167996,106.831499,106.92704,106.94504,106.7675,107.255028,106.964502,107.182011,107.885003,108.37804,108.37804,108.464498,108.389577,108.819026,108.68202,108.585997,108.40704,108.40704,108.412971,108.605499,108.605499],"USDKES":[103.894985,103.798462,103.910385,103.880385,103.880043,103.798699,103.801827,103.730334,103.739547,103.740385,103.740385,103.740392,103.789733,103.759604,103.750214,103.740065,103.760385,103.760385,103.760144,103.75133,103.75133],"USDKGS":[69.735801,69.813603,69.825504,69.825504,69.825501,69.810115,69.836024,69.844301,69.850234,69.810604,69.810604,69.810599,69.807899,69.839601,69.849828,69.846697,69.803104,69.803104,69.803102,69.789004,69.789004],"USDKHR":[4080.750309,4094.999979,4090.000351,4087.350384,4087.35023,4084.999879,4087.49576,4087.999924,4074.999747,4070.000351,4070.000351,4098.595304,4069.169045,4062.49913,4064.999726,4071.000275,4070.000351,4070.000351,4070.000283,4060.000208,4060.000208],"USDKMF":[449.44971,449.40203,448.450384,448.450384,448.450304,448.124997,448.340195,448.750245,446.950341,445.925039,445.925039,445.924998,445.924992,446.497829,445.549695,442.550146,442.150384,442.150384,442.150417,441.749902,441.749902],"USDKPW":[900.08122,900.085235,899.587565,899.506355,900.087996,900.082358,900.086419,900.082822,900.084586,900.074755,900.074755,900.086763,900.079344,900.069597,900.078702,900.066273,900.862637,901.022188,900.061457,900.071729,900.071729],"USDKRW":[1204.570156,1201.080238,1192.250384,1192.303792,1192.330312,1196.759697,1199.370301,1197.780102,1189.810099,1183.485039,1183.485039,1183.489848,1183.903721,1184.054951,1185.75498,1178.269712,1178.895039,1178.895039,1179.079392,1171.698462,1171.698462],"USDKWD":[0.303698,0.3037,0.304204,0.304204,0.304199,0.30405,0.30405,0.30405,0.30405,0.30375,0.30375,0.30375,0.30405,0.30405,0.30405,0.30348,0.30335,0.30335,0.30335,0.30315,0.30315],"USDKYD":[0.83026,0.83285,0.833745,0.834065,0.834065,0.83293,0.833055,0.833465,0.83328,0.833105,0.833105,0.833439,0.833602,0.833598,0.833205,0.832734,0.833431,0.833431,0.833431,0.833247,0.833247],"USDKZT":[387.715018,388.875034,389.140383,389.290383,389.290035,389.110459,389.969948,389.806766,390.180556,389.360383,389.360383,389.51518,389.68811,389.85282,390.06275,389.87546,390.28269,390.28269,390.28269,389.83142,389.83142],"USDLAK":[8790.999493,8827.504014,8825.000349,8827.203782,8827.202075,8825.000026,8828.000186,8830.999755,8822.501099,8822.503782,8822.503782,8822.201967,8823.792995,8825.000189,8830.000292,8824.999437,8825.000349,8825.000349,8825.000149,8824.999785,8824.999785],"USDLBP":[1506.506202,1510.950205,1511.503779,1513.203779,1513.197429,1511.649852,1511.65028,1510.501068,1510.949964,1511.050382,1511.050382,1512.007197,1512.597399,1511.498139,1512.000364,1510.6079,1509.226039,1509.226039,1509.225982,1511.999931,1511.999931],"USDLKR":[181.390093,181.405008,181.585039,181.650382,181.64998,180.724984,180.334996,180.559628,180.595,180.540382,180.540382,180.60326,181.15088,182.05866,181.79119,181.86174,182.01633,182.01633,182.01633,181.78538,181.78538],"USDLRD":[209.749645,209.900601,210.550382,210.550382,210.550119,210.99953,211.250321,211.249884,210.999669,211.000348,211.000348,210.99964,211.000051,211.211276,211.489513,211.449919,211.403775,211.403775,211.399323,211.3961,211.3961],"USDLSL":[15.269787,15.170133,15.050382,15.050382,15.050042,15.150073,15.260081,15.179557,15.16987,14.960382,14.960382,14.959865,14.960209,14.87036,14.990064,14.914998,14.803772,14.803772,14.803104,14.755017,14.755017],"USDLTL":[2.95274,2.95274,2.95274,2.95274,2.95274,2.95274,2.95274,2.95274,2.95274,2.95274,2.95274,2.95274,2.95274,2.95274,2.95274,2.95274,2.95274,2.95274,2.95274,2.95274,2.95274],"USDLVL":[0.60489,0.60489,0.60489,0.60489,0.60489,0.60489,0.60489,0.604889,0.60489,0.60489,0.60489,0.60489,0.60489,0.60489,0.60489,0.60489,0.60489,0.60489,0.60489,0.60489,0.60489],"USDLYD":[1.41455,1.415016,1.415039,1.41665,1.41665,1.420079,1.415014,1.41501,1.41501,1.415039,1.415039,1.41459,1.409031,1.41036,1.404997,1.414973,1.415039,1.415039,1.414991,1.409592,1.409592],"USDMAD":[9.703898,9.69625,9.690381,9.69845,9.69845,9.681499,9.71125,9.695021,9.674992,9.675039,9.675039,9.666696,9.672157,9.654977,9.629565,9.609439,9.59875,9.59875,9.59875,9.606502,9.606502],"USDMDL":[17.655993,17.712026,17.708039,17.715039,17.714998,17.693,17.642033,17.580949,17.55011,17.498039,17.498039,17.505301,17.519801,17.467245,17.435704,17.358989,17.372301,17.372301,17.372301,17.358068,17.358068],"USDMGA":[3713.999905,3654.000011,3637.503758,3730.503758,3730.502706,3662.000124,3652.000021,3644.999812,3649.999719,3650.000347,3650.000347,3726.071603,3723.550402,3646.99994,3646.999861,3640.000238,3626.000347,3626.000347,3625.999863,3624.999756,3624.999756],"USDMKD":[56.110498,56.163008,56.162039,56.116039,56.116024,56.054005,56.127023,56.037038,55.800502,55.702039,55.702039,55.722701,55.888649,55.736352,55.522946,55.253509,55.126193,55.126193,55.126193,55.14597,55.14597],"USDMMK":[1526.950473,1529.949948,1533.75038,1534.25038,1534.249704,1531.350126,1520.449948,1520.150171,1530.549972,1529.95038,1529.95038,1530.527698,1530.930297,1530.993403,1531.215306,1531.8352,1532.137704,1532.137704,1532.137705,1532.376499,1532.376499],"USDMNT":[2663.773713,2667.163808,2633.21434,2627.5,2666.611721,2667.65257,2668.2254,2668.876203,2669.343901,2672.732709,2673.459961,2669.062708,2667.352034,2673.07009,2672.216369,2673.524602,2683.510717,2684.224364,2684.326274,2687.247621,2687.247621],"USDMOP":[8.047401,8.07105,8.081404,8.08415,8.08415,8.07635,8.07625,8.080649,8.079297,8.075404,8.075404,8.078386,8.08161,8.08345,8.079494,8.074054,8.078267,8.078267,8.078267,8.07761,8.07761],"USDMRO":[357.000346,357.000346,357.000346,357.000346,357.000346,357.000346,357.000346,357.000346,357.000346,357.000346,357.000346,357.000346,357.000346,357.000346,357.000346,357.000346,357.000346,357.000346,357.000346,357.000346,357.000346],"USDMUR":[36.476498,36.501978,36.451039,36.448039,36.450073,36.202026,36.445502,36.495005,36.503504,36.446039,36.446039,36.449812,36.390624,36.408908,36.449821,36.449929,36.372432,36.372432,36.369698,36.248845,36.248845],"USDMVR":[15.450483,15.402763,15.450378,15.450378,15.449728,15.449773,15.45017,15.475009,15.39674,15.410378,15.410378,15.409974,15.409796,15.410178,15.402605,15.409912,15.403741,15.403741,15.40592,15.399493,15.399493],"USDMWK":[731.789787,732.503321,731.000345,735.045039,735.044957,730.000262,730.999978,734.501651,718.000447,730.000345,730.000345,734.462981,734.656602,730.00039,730.999791,729.999836,732.503739,732.503739,732.497891,729.999758,729.999758],"USDMXN":[19.798698,19.65555,19.51525,19.51525,19.535801,19.57425,19.627898,19.599903,19.449699,19.309404,19.309404,19.323101,19.27185,19.23315,19.209901,19.194803,19.104039,19.104039,19.132698,19.124305,19.124305],"USDMYR":[4.1875,4.187037,4.185604,4.185604,4.184499,4.192496,4.193502,4.197502,4.189022,4.186039,4.186039,4.182498,4.187997,4.191497,4.190602,4.179499,4.186504,4.186504,4.1855,4.182499,4.182499],"USDMZN":[61.960097,61.980205,61.980377,61.980377,61.980419,62.000224,62.054975,62.075009,62.124972,62.170377,62.170377,62.170112,62.185001,62.185005,62.230138,62.290213,62.310377,62.310377,62.30962,62.374976,62.374976],"USDNAD":[15.269715,15.170593,15.050377,15.050377,15.050344,15.149517,15.259911,15.180204,15.169662,14.960377,14.960377,14.960072,14.959752,14.869918,14.989689,14.915041,14.803729,14.803729,14.798241,14.759659,14.759659],"USDNGN":[361.497441,361.000236,361.503727,361.503727,361.495518,361.999879,360.503502,360.498393,361.99994,361.000344,361.000344,361.000192,360.99998,361.499858,361.504533,362.000043,361.503727,361.503727,361.499746,361.500036,361.500036],"USDNIO":[33.493019,33.59797,33.680377,33.602039,33.602035,33.60984,33.630579,33.649792,33.659709,33.650377,33.650377,33.575895,33.58436,33.74995,33.750058,33.760014,33.750377,33.750377,33.749934,33.650556,33.650556],"USDNOK":[9.128025,9.117535,9.09685,9.095304,9.0968,9.1363,9.16209,9.175972,9.120496,9.074435,9.074435,9.085401,9.109665,9.12913,9.17769,9.18366,9.384304,9.384304,9.165885,9.13587,9.13587],"USDNPR":[113.349534,113.359515,113.350376,113.390376,113.389936,113.515024,113.814993,113.654947,113.715011,113.660376,113.660376,113.69823,113.92766,114.50987,114.29724,113.80953,113.894404,113.894404,113.8944,113.300103,113.300103],"USDNZD":[1.59589,1.586545,1.58065,1.58315,1.583335,1.58964,1.587875,1.59059,1.580975,1.578804,1.578801,1.580355,1.586015,1.588665,1.59054,1.573835,1.567239,1.567239,1.566662,1.559802,1.559802],"USDOMR":[0.384955,0.384985,0.385055,0.384935,0.384935,0.385015,0.38499,0.384925,0.38496,0.38502,0.38502,0.385039,0.384957,0.385027,0.384975,0.384962,0.385044,0.385044,0.385044,0.384989,0.384989],"USDPAB":[0.9963,0.9994,1.000435,1.000825,1.000825,0.999545,0.99965,1.000135,0.99995,0.999735,0.999735,1.000091,1.000268,1.000318,0.999801,0.999254,1.000081,1.000081,1.000081,0.999839,0.999839],"USDPEN":[3.377196,3.3705,3.379039,3.37675,3.37675,3.384016,3.383497,3.366504,3.366031,3.357504,3.357504,3.365564,3.360975,3.365946,3.362028,3.349916,3.338039,3.338039,3.337977,3.338504,3.338504],"USDPGK":[3.391198,3.384988,3.385039,3.40635,3.40635,3.38496,3.38503,3.379659,3.384996,3.380375,3.380375,3.404259,3.404516,3.385021,3.385017,3.379919,3.385039,3.385039,3.384982,3.37976,3.37976],"USDPHP":[51.99605,51.800497,51.715504,51.678504,51.694955,51.920272,51.84037,51.869927,51.598405,51.555504,51.555504,51.506059,51.650502,51.64014,51.56007,51.350499,51.250375,51.250375,51.260375,51.114972,51.114972],"USDPKR":[156.325021,156.749761,156.000342,157.105038,157.105001,156.000299,156.625026,156.87498,156.500913,156.503704,156.503704,156.85283,156.81911,156.150448,155.749822,155.74981,155.950375,155.950375,155.949552,155.999695,155.999695],"USDPLN":[3.97895,3.948535,3.934404,3.934404,3.93225,3.94586,3.94389,3.93615,3.914405,3.89665,3.89665,3.901625,3.896225,3.88945,3.86755,3.851995,3.835104,3.835104,3.83935,3.835195,3.835195],"USDPYG":[6375.387686,6400.350165,6394.550374,6396.703699,6396.705187,6398.149785,6393.550082,6394.301827,6405.391543,6406.603699,6406.603699,6409.152699,6414.279897,6416.889898,6446.274204,6463.870797,6475.101304,6475.101304,6475.101298,6462.038703,6462.038703],"USDQAR":[3.641002,3.640983,3.641038,3.641038,3.640974,3.641029,3.64075,3.640968,3.641018,3.641038,3.641038,3.640959,3.640972,3.64075,3.640994,3.64099,3.641038,3.641038,3.641044,3.64099,3.64099],"USDRON":[4.330499,4.325598,4.324204,4.324104,4.323897,4.325296,4.3348,4.322596,4.323601,4.307904,4.307904,4.307898,4.311305,4.309401,4.293105,4.273305,4.259404,4.259404,4.270905,4.2673,4.2673],"USDRSD":[107.155006,107.060261,107.010373,107.005038,107.005,107.090036,107.120632,106.939766,106.770014,106.465038,106.465038,106.46669,106.45032,106.484987,106.050248,105.685016,105.28346,105.28346,105.28346,105.505019,105.505019],"USDRUB":[65.251501,65.111398,64.660704,64.660704,64.699398,64.979101,65.190401,65.052301,64.427698,64.204038,64.204038,64.274597,64.287403,64.313199,64.117698,64.099902,63.799904,63.799904,63.9252,63.760099,63.760099],"USDRWF":[921.78,922.5,926,926.05,926.05,925,922.5,922.5,925,925,925,925.8631,926.1111,925,926,925,927.5,927.5,927.5,925,925],"USDSAR":[3.75065,3.75085,3.75135,3.75015,3.751099,3.75095,3.750497,3.74985,3.750398,3.75345,3.75345,3.75115,3.750465,3.751122,3.75061,3.750483,3.750873,3.750873,3.75095,3.750706,3.750706],"USDSBD":[8.31035,8.275899,8.275904,8.275904,8.275902,8.20785,8.22135,8.23545,8.26955,8.27135,8.27135,8.27135,8.27135,8.305762,8.305762,8.280362,8.260099,8.260099,8.260099,8.294408,8.294408],"USDSCR":[13.699009,13.699502,13.701038,13.696504,13.696497,13.700996,13.699502,13.696972,13.699503,13.710372,13.710372,13.710013,13.683637,13.684019,13.684875,13.703654,13.706565,13.706565,13.706565,13.704969,13.704969],"USDSDG":[44.948493,45.084506,45.130504,45.148504,45.1485,45.094501,45.0915,45.115502,45.11199,45.095038,45.095038,45.112007,45.125203,45.121551,45.104559,45.077373,45.117042,45.117042,45.117042,45.10749,45.10749],"USDSEK":[9.874597,9.857095,9.843404,9.841104,9.843902,9.91308,9.940655,9.949203,9.838299,9.79737,9.79737,9.8142,9.819835,9.807697,9.778201,9.709403,9.65331,9.65331,9.66385,9.641425,9.641425],"USDSGD":[1.384035,1.380397,1.37893,1.37893,1.379901,1.381396,1.382601,1.381635,1.375497,1.373215,1.373215,1.372303,1.36904,1.3712,1.370794,1.36481,1.364645,1.364645,1.364027,1.36128,1.36128],"USDSHP":[1.320903,1.320896,1.320904,1.320904,1.320898,1.3209,1.3209,1.320898,1.3209,1.320904,1.320904,1.320897,1.320895,1.320899,1.320898,1.320902,1.320904,1.320904,1.320901,1.320897,1.320897],"USDSLL":[9400.000323,9449.99969,9450.000339,9450.000339,9450.000224,9499.999867,9499.999984,9650.000032,9599.999933,9550.000339,9550.000339,9550.000201,9549.999727,9549.999555,9500.000515,9550.000293,9525.000339,9525.000339,9525.000187,9595.000124,9595.000124],"USDSOS":[581.000347,579.99994,580.000338,580.000338,579.999889,582.999849,580.000121,579.999992,579.999717,581.000338,581.000338,581.000258,580.99972,581.999582,580.000279,580.999718,580.000338,580.000338,579.999708,580.000343,580.000343],"USDSRD":[7.457976,7.457976,7.458038,7.458038,7.457976,7.458025,7.458028,7.457962,7.458035,7.458038,7.458038,7.457979,7.458014,7.457993,7.457996,7.457988,7.458038,7.458038,7.45802,7.457985,7.457985],"USDSTD":[21560.79,21560.79,21560.79,21560.79,21560.79,21560.79,21560.79,21560.79,21560.79,21560.79,21560.79,21560.79,21560.79,21560.79,21560.79,21560.79,21560.79,21560.79,21560.79,21560.79,21560.79],"USDSVC":[8.717701,8.74455,8.753404,8.75685,8.75685,8.746501,8.74725,8.75095,8.749821,8.74795,8.74795,8.751246,8.752227,8.752781,8.748447,8.743582,8.751157,8.751157,8.751157,8.748813,8.748813],"USDSYP":[514.999794,515.000492,515.000338,515.000338,514.999926,515.000121,514.999659,514.999656,515.000366,515.000338,515.000338,514.999974,515.000051,514.999793,515.000471,514.999799,515.000338,515.000338,514.999563,515.000133,515.000133],"USDSZL":[15.230497,15.169912,15.05037,15.152038,15.152011,15.150056,15.260513,15.179564,15.169686,14.76037,14.76037,14.900226,14.798173,14.870148,14.990312,14.990329,14.803655,14.803655,14.799962,14.760351,14.760351],"USDTHB":[30.615036,30.52993,30.421038,30.421038,30.429791,30.480241,30.421009,30.343003,30.415953,30.461038,30.455036,30.390376,30.395264,30.433968,30.370129,30.310309,30.296462,30.296462,30.309853,30.269717,30.269717],"USDTJS":[9.65475,9.68405,9.696604,9.70035,9.70035,9.685897,9.69125,9.69085,9.68955,9.68645,9.68645,9.690168,9.693191,9.691935,9.688316,9.682507,9.691257,9.691257,9.691257,9.688905,9.688905],"USDTMT":[3.51,3.5,3.5,3.5,3.5,3.51,3.5,3.51,3.5,3.51,3.51,3.51,3.51,3.51,3.5,3.51,3.5,3.5,3.5,3.5,3.5],"USDTND":[2.855496,2.852499,2.856504,2.856504,2.856501,2.842501,2.851499,2.8545,2.848503,2.83625,2.83625,2.83625,2.83625,2.844974,2.840171,2.827986,2.819038,2.819038,2.818973,2.822968,2.822968],"USDTOP":[2.33325,2.33165,2.32785,2.32785,2.32785,2.32545,2.328901,2.328902,2.32945,2.324604,2.324604,2.324597,2.323498,2.326201,2.328401,2.3287,2.32025,2.32025,2.32025,2.315395,2.315395],"USDTRY":[5.703699,5.695398,5.696204,5.696504,5.712496,5.840989,5.83571,5.877402,5.843702,5.885304,5.885304,5.8953,5.928402,5.92436,5.885101,5.818202,5.792038,5.792038,5.799028,5.86042,5.86042],"USDTTD":[6.74345,6.759095,6.770104,6.772504,6.772501,6.77155,6.77195,6.776947,6.77655,6.77535,6.77535,6.778069,6.778533,6.778751,6.779418,6.778074,6.769052,6.769052,6.769052,6.772156,6.772156],"USDTWD":[31.070176,30.929616,30.892038,30.892038,30.86299,30.800971,30.755019,30.673056,30.5075,30.641038,30.641038,30.64102,30.609037,30.496043,30.520236,30.621974,30.552038,30.552038,30.551987,30.52196,30.52196],"USDTZS":[2289.698647,2291.695993,2291.703635,2300.903635,2291.698835,2291.805703,2301.29585,2301.408288,2301.399794,2302.103635,2302.103635,2302.103496,2300.600677,2300.69739,2299.601236,2298.297942,2297.103635,2297.103635,2297.102255,2296.192461,2296.192461],"USDUAH":[24.807503,24.793502,24.594038,24.604038,24.604028,24.8505,24.704998,24.684501,24.526025,24.623504,24.623504,24.633167,24.653701,24.768062,24.822076,24.762217,25.083531,25.083531,25.083531,24.893495,24.893495],"USDUGX":[3666.650075,3678.650336,3681.550367,3683.000335,3682.99979,3685.549733,3693.499134,3698.29876,3695.000144,3706.750367,3706.750367,3708.110499,3701.016902,3695.710405,3689.3318,3687.158902,3689.302904,3689.302904,3689.302903,3689.603902,3689.603902],"USDUSD":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"USDUYU":[36.8205,36.995022,37.202038,37.214504,37.214495,37.149501,37.130991,37.237497,37.224501,37.200504,37.200504,37.215224,37.205127,37.156867,37.207657,37.297234,37.338628,37.338628,37.338628,37.342733,37.342733],"USDUZS":[9400.701015,9439.999861,9450.000335,9432.703624,9432.696299,9420.000289,9424.999725,9420.000247,9424.999969,9420.000335,9420.000335,9440.172018,9442.571982,9445.00015,9444.999855,9450.000211,9450.000335,9450.000335,9450.00027,9448.000157,9448.000157],"USDVEF":[9.987502,9.987499,9.987504,9.987504,9.987497,9.987498,9.987497,9.987499,9.987499,9.987504,9.987504,9.987499,9.9875,9.987502,9.987498,9.987505,9.987504,9.987504,9.987498,9.987501,9.987501],"USDVND":[23120.95,23208.5,23208.5,23219.5,23219.5,23208.5,23208.5,23208.5,23208.5,23208.5,23208.5,23205.256,23208.5,23208.5,23208.5,23208.5,23208.5,23208.5,23208.5,23208.5,23208.5],"USDVUV":[118.053256,118.604275,116.322016,116,118.250836,118.104034,118.375138,118.384384,118.405163,116.327488,116,117.954061,117.723683,118.154921,118.094325,117.393427,117.069161,117.074915,117.315597,117.037217,117.037217],"USDWST":[2.683582,2.684502,2.659387,2.658868,2.67835,2.685992,2.687379,2.687983,2.680233,2.728319,2.729286,2.695037,2.684539,2.696751,2.692675,2.672397,2.721681,2.722102,2.686952,2.669569,2.669569],"USDXAF":[598.479797,598.202495,597.210365,597.410365,597.409745,597.229709,596.801849,597.379616,594.897771,594.220365,594.220365,594.43317,594.81048,595.64767,594.84824,589.807179,589.30115,589.30115,589.30115,587.59344,587.59344],"USDXAG":[0.05687,0.056741,0.057013,0.057013,0.056912,0.057418,0.056246,0.055963,0.057096,0.057044,0.057044,0.05718,0.056666,0.057387,0.057474,0.056954,0.056997,0.056997,0.056905,0.056928,0.056928],"USDXAU":[0.000667,0.000663,0.000665,0.000665,0.000663,0.00067,0.000663,0.00066,0.000669,0.000672,0.000672,0.000673,0.00067,0.000675,0.000671,0.00067,0.000671,0.000671,0.00067,0.000674,0.000674],"USDXCD":[2.70255,2.70255,2.70255,2.70255,2.70255,2.70255,2.702551,2.70255,2.70255,2.70255,2.70255,2.70255,2.70255,2.70255,2.70255,2.70255,2.70255,2.70255,2.70255,2.70255,2.70255],"USDXDR":[0.732577,0.731554,0.731147,0.731122,0.73135,0.73205,0.73285,0.732347,0.7308,0.729574,0.729634,0.7294,0.72935,0.728951,0.728059,0.726351,0.72599,0.726222,0.72535,0.725392,0.725392],"USDXOF":[598.480072,599.501466,601.000332,597.410364,597.410403,598.500178,598.501142,598.000424,595.000308,596.503602,596.503602,594.43317,594.80779,595.00023,595.000056,589.81513,590.000332,590.000332,589.999624,587.999606,587.999606],"USDXPF":[108.809781,109.049696,109.150364,108.620364,108.619988,109.050072,109.09623,109.124956,108.650199,108.5036,108.5036,108.07431,108.14144,108.449423,108.374976,107.697847,107.3036,107.3036,107.30018,107.549782,107.549782],"USDYER":[250.294781,250.350023,250.350364,250.350364,250.349814,250.301015,250.302706,250.299233,250.349645,250.303597,250.303597,250.302065,250.302774,250.301383,250.350037,250.346008,250.350364,250.350364,250.350351,250.349855,250.349855],"USDZAR":[15.281896,15.135396,15.036604,15.036604,15.081992,15.182301,15.277901,15.216296,15.031402,14.783037,14.783037,14.7879,14.819103,14.8839,14.943898,14.833897,14.77875,14.77875,14.767302,14.760606,14.760606],"USDZMK":[9001.200189,9001.201353,9001.203593,9001.203593,9001.235183,9001.195771,9001.247361,9001.194418,9001.199577,9001.203593,9001.203593,9001.198567,9001.205007,9001.205582,9001.200141,9001.200846,9001.203593,9001.203593,9001.194201,9001.200677,9001.200677],"USDZMW":[13.067027,13.156495,13.150504,13.155504,13.155504,13.109499,13.119502,13.146018,13.154982,13.150504,13.150504,13.155233,13.178667,13.219251,13.207704,13.204931,13.216214,13.216214,13.216214,13.22856,13.22856]};
+
+    SVG.on(document, 'DOMContentLoaded', function () {
+        for (var pair in RATES) {
+            DrawLine(pair);
+        }
+    });
+
+    function convertRatesToPolyline(rates) {
+        var height = 30,
+            output = [],
+            min = Math.min(...rates),
+            diff = Math.max(...rates) - min;
+
+        for (var i = 0; i < rates.length; i++) {
+            var heightFromTop = height - (((rates[i] - min) / diff) * height);
+            heightFromTop = heightFromTop < 1 ? 1 : heightFromTop;
+            heightFromTop = heightFromTop > height - 1 ? height - 1 : heightFromTop;
+            output.push([i * 5, heightFromTop]);
+        }
+
+        return output;
+    }
+
+    function DrawLine(symbol) {
+        var rates = RATES[symbol],
+            draw = SVG(symbol + '_SVG').size('100%', '30px'),
+            coords = convertRatesToPolyline(rates);
+
+        draw.clear();
+
+        if (coords && coords[0] && coords[0][1]) {
+            var polyline = draw.polyline(coords).fill('none'),
+                colour = '#ff0066',
+                fillColour = '#ffc4dc';
+
+            if (coords[0][1] > coords[coords.length - 1][1]) {
+                colour = '#33ff33';
+                fillColour = '#c8ffc8';
+            }
+            polyline.stroke({color: colour, width: 2, linecap: 'round', linejoin: 'round'});
+            coords.push([[coords[coords.length - 1][0], 30], [0, 30], [0, coords[0][1]]]);
+            draw.polyline(coords).fill(fillColour);
+        }
+    }
+
+</script>
+
+</div>
+
+<hr />
+
+<div id="footer">
+    <div class="container text-center">
+        <p class="text-muted credit" style="color:#fff"><p>Free Forex API &copy; 2019</p>
+        <p><a style="color:gray" href="/cdn-cgi/l/email-protection#52253a3b26373e3b21261234203737343d20372a33223b7c313d3f"><span class="__cf_email__" data-cfemail="ccbba4a5b8a9a0a5bfb88caabea9a9aaa3bea9b4adbca5e2afa3a1">[email&#160;protected]</span></a></p>
+    </div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
