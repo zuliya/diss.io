@@ -1,0 +1,18 @@
+
+TODO prep for the 22 of October
+
+Code set up TODO 
+1. Set up the generic HTML
+2. Set up basic JS / CSS 
+3. Write a mock up API call 
+4. Import a sampele API call to pull live data for the curreny conversion 
+
+
+General knowledge about Forex 
+0. Read the article 
+1. Summarise it into sections and import to a web page 
+
+Deployment (Github pages) TODO 
+1. Set up git for the project 
+2. Deploy to the github pages the mock up HTTP 
+
